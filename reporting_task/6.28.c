@@ -6,7 +6,7 @@ struct node{
     struct node *next;
 };
 
-void change_first_last(struct node *head){ // пункт a: меняем местами первый и последний элемент
+void change_first_last(struct node *head){ // a
     struct node *tmp = head;
     struct node *last;
     double first;
@@ -21,7 +21,7 @@ void change_first_last(struct node *head){ // пункт a: меняем мес�
     last->data = first;
 }
 
-void remove_first_occurrence1(struct node **head, double elem){ // пункт b1: удаляем первое вхождение введенного элемента 
+void remove_first_occurrence1(struct node **head, double elem){ // b2
     struct node* tmp = (*head);
     struct node *prev;
     struct node *dop;
@@ -48,7 +48,7 @@ void remove_first_occurrence1(struct node **head, double elem){ // пункт b1
     }
 }
 
-void remove_first_occurrence2(struct node *a, double elem){ // пункт b2: удаляем первое вхождение введенного элемента 
+void remove_first_occurrence2(struct node *a, double elem){ // b1
     struct node *tmp = a->next;
     struct node *prev;
     struct node *dop;
@@ -75,7 +75,7 @@ void remove_first_occurrence2(struct node *a, double elem){ // пункт b2: у
     }
 }
 
-void remove_all_occurrence1(struct node **head, double elem){ // пункт c1: удаляем все вхождения введенного элемента 
+void remove_all_occurrence1(struct node **head, double elem){ // c2
     struct node* tmp = (*head);
     struct node *prev;
     struct node *dop;
@@ -95,7 +95,7 @@ void remove_all_occurrence1(struct node **head, double elem){ // пункт c1: 
     (*head) = tmp;
 }
 
-void remove_all_occurrence2(struct node *a, double elem){ // пункт c2: удаляем все вхождения введенного элемента 
+void remove_all_occurrence2(struct node *a, double elem){ // c1
     struct node *tmp = a->next;
     struct node *prev;
     struct node *dop;
@@ -115,7 +115,7 @@ void remove_all_occurrence2(struct node *a, double elem){ // пункт c2: уд
     a->next = tmp;
 }
 
-void duplicate(struct node *head, double same){ // пункт d: дублируем звено с заданным значением
+void duplicate(struct node *head, double same){ // d
     struct node *tmp = head;
     struct node *q;
     
